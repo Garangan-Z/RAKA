@@ -60,14 +60,13 @@ def jalan(z):
 		sys.stdout.flush()
 		time.sleep(00.1)
 
-raka_logo = '''
-       \×1b[1;96m__________  _________
-      \x1b[1;96m/          )          )
-     \x1b[1;96m/    RRRR   / RRRRR    /
-    \x1b[1;96m/    /  /   /      /   /
-   \x1b[1;96m/    RRRR   / RRRR /   /
-  \x1b[1;96m/    / \   \  (   )    /
- \x1b[1;96m/    /   \   \  RRR    /
+raka_logo = '''\×1b[1;96m__________  _________
+\x1b[1;96m/          )          )
+\x1b[1;96m/    RRRR   / RRRRR    /
+\x1b[1;96m/    /  /   /      /   /
+\x1b[1;96m/    RRRR   / RRRR /   /
+\x1b[1;96m/    / \   \  (   )    /
+\x1b[1;96m/    /   \   \  RRR    /
 \x1b[1;96m/____/     \___\ ______/
 \x1b[1;101m\x1b[1;97mCreat By : Raka Andrian Tara => 1 Januari 2022\x1b[0m
 __________________________________________________
