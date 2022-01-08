@@ -163,7 +163,7 @@ def menu():
 		login()
 	except requests.exceptions.ConnectionError:
 		print(' [!] Check Your Internet Vonnection ')
-	print(rafi_logo)
+	print(raka_logo)
 	print ' [%s-%s] Nama    : %s'%(ml,ra,nama)
 	print ' [%s-%s] Ip User : %s'%(ml,ra,ip)
 	print ' [%s-%s] Id User : %s\n'%(ml,ra,id)
