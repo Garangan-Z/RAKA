@@ -61,7 +61,7 @@ def jalan(z):
 		time.sleep(00.1)
 
 raka_logo = '''
-\×1b[1;96m__________ 
+\×1b[1;96m
 /          )   
 /    RRRR   / 
 /    /  /   /  
