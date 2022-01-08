@@ -207,7 +207,7 @@ def crack():
 		global loop, token
 		ra_pw = []
 		sys.stdout.write(
-		      '\r [%sC] Crack %s - %s Please Wait.. ! ' % (ra,loop, len(id))
+		      '\r [%sC] Cracking %s - %s Please Wait.. ! ' % (ra,loop, len(id))
 		); sys.stdout.flush()
 		try:os.mkdir("results")
 		except OSError:pass
@@ -222,7 +222,6 @@ def crack():
 					ra_pw.append(ss+"123")
 					ra_pw.append(ss+"1234")
 					ra_pw.append(ss+"12345")
-                                        ra_pw.append(ss+"123456")
 				else:
 					ra_pw.append("000786")
 					ra_pw.append("786786")
