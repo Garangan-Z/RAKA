@@ -271,7 +271,7 @@ def crack():
 if __name__ == '__main__':
 	#os.system('clear')
 	#print(raka_logo)
-	#user = raw_input(' [\x1b[101m\x1b[1;97m•\x1b[0m] siapa nama anda : ')
+	#user = raw_input(' [\x1b[101m\x1b[1;97m?\x1b[0m] siapa nama anda : ')
 	#print# ' hello : %s'#%(user)
 	#lock()
 	login()
