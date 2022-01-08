@@ -156,7 +156,7 @@ def menu():
 		login()
 	except requests.exceptions.ConnectionError:
 		print(' [!] check your Internet connection ')
-	print(rafi_logo)
+	print(raka_logo)
 	print ' [%s-%s] facebook user : %s'%(ml,ra,nama)
 	print ' [%s-%s] ip user : %s'%(ml,ra,ip)
 	print ' [%s-%s] id user : %s\n'%(ml,ra,id)
