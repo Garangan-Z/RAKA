@@ -154,9 +154,9 @@ def menu():
 	except requests.exceptions.ConnectionError:
 		print(' [!] check your Internet connection ')
 	print(raka_logo)
-	print ' [%s•%s] Nama : %s'%(ml,ra,nama)
-	print ' [%s•%s] Ip   : %s'%(ml,ra,ip)
-	print ' [%s•%s] Id   : %s\n'%(ml,ra,id)
+	print ' [%s-%s] Nama : %s'%(ml,ra,nama)
+	print ' [%s-%s] Ip   : %s'%(ml,ra,ip)
+	print ' [%s-%s] Id   : %s\n'%(ml,ra,id)
 	print ' [%s1%s] Start crack '%(hj,ra)
 	print ' [%s2%s] Delete token '%(ku,ra)
 	print ' [%s0%s] logout\n '%(m,ra)
