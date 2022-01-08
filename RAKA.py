@@ -61,14 +61,6 @@ def jalan(z):
 		time.sleep(00.1)
 
 raka_logo = '''
-\×1b[1;96m
-/          )   
-/    RRRR   / 
-/    /  /   /  
-/    RRRR   / 
-/    / \   \  
-/    /   \   \
-/____/     \___\ 
 \x1b[1;101m\x1b[1;97mCreat By : Raka Andrian Tara => 1 Januari 2022\x1b[0m
 __________________________________________________
 '''
