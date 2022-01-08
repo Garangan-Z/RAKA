@@ -186,7 +186,7 @@ def crack():
 	except IOError:
 		print' [?] invalid token '
 		tokenz()
-	ra_id = raw_input(" [\x1b[101m\x1b[1;97m•\x1b[0m] ID Public : ")
+	ra_id = raw_input(" [\x1b[101m\x1b[1;97m-\x1b[0m] ID Public : ")
 	try:
 		pok = requests.get("https://graph.facebook.com/"+ra_id+"?access_token="+token)
 		sp = json.loads(pok.text)
@@ -198,7 +198,7 @@ def crack():
 		rax_x = i['id']
 		name = i['name']
 		id.append(rax_x+'<=>'+name)
-	print(" [\x1b[101m\x1b[1;97m•\x1b[0m] Total ID  : "+str(len(id)))
+	print(" [\x1b[101m\x1b[1;97m-\x1b[0m] Total ID  : "+str(len(id)))
 	print(garis)
 	print ' \t\t\x1b[1;101m\x1b[1;97mCTRL + Z FOR STOP\x1b[0m'
 	print(garis)
