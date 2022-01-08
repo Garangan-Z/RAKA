@@ -208,7 +208,7 @@ def crack():
 		id.append(rax_x+'<=>'+name)
 	print(" [\x1b[101m\x1b[1;97m-\x1b[0m] Total ID  : "+str(len(id)))
 	print(garis)
-	print ' \t\t\x1b[1;101m\x1b[1;97mCTRL + Z FOR STOP\x1b[0m'
+	print ' \t\t\x1b[1;101m\x1b[1;97mNOTE : JIKA TAK ADA HASIL MAIN KAN MODE PESAWAT 1 DETIK ...\x1b[0m'
 	print(garis)
 
 	def main(user):
