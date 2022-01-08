@@ -207,7 +207,7 @@ def crack():
 		global loop, token
 		ra_pw = []
 		sys.stdout.write(
-		      '\r [%sMemulai] Crack %s - %s Please Wait.. ! ' % (ra,loop, len(id))
+		      '\r [%sC] Crack %s - %s Please Wait.. ! ' % (ra,loop, len(id))
 		); sys.stdout.flush()
 		try:os.mkdir("results")
 		except OSError:pass
