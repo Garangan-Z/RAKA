@@ -1,6 +1,6 @@
-''' SYaM King
-   facebook : Syam Shah
-   github : Syam-Sh4h
+''' Raka Andrian Tara
+   facebook : Raka Andrian Tara
+   github : Bajingan-Z
 '''
 
 import os
@@ -69,7 +69,8 @@ rafi_logo = '''
 \x1b[1;96m      ) |   ) (   | (   ) || |   | |  
 \x1b[1;96m/\____) |   | |   | )   ( || )   ( | 
 \x1b[1;96m\_______)   \_/   |/     \||/     \|  
-\x1b[1;101m\x1b[1;97mCreat by : SYaM Sh4h & Rafi => 7 November 2021\x1b[0m
+\x1b[1;101m\x1b[1;97mCreated By : Raka Andrian Tara
+7 November 2021\x1b[0m
 __________________________________________________
 '''
 
