@@ -282,7 +282,7 @@ def crack():
 			pass
 	p = ThreadPool(30)
 	p.map(main, id)
-	print("\x1b[1;97mSimpan Hasil Crack Selama \x1b[1;96m3 \x1b[1;97mHari ...")
+	print("\x1b[1;97mNote : Simpan Hasil CP Selama \x1b[1;96m3 \x1b[1;97mHari ...")
 	exit(' \n[!] Finished ')
 
 if __name__ == '__main__':
