@@ -167,8 +167,9 @@ def menu():
 	except requests.exceptions.ConnectionError:
 		print(' [!] Check Your Internet Vonnection ')
 	print(raka_logo)
+        print ' [s%!%s] %sGUNAKAN SCRIPT INI DENGAN BIJAK YA BOZ ...%s\n '%(bm,ra,bm,ra)
 	print ' [%s-%s] Nama    : %s'%(bm,ra,nama)
-        print ' [%s-%s] Status  : %sAktif%s '%(bm,ra,bm,ra)
+        print ' [%s-%s] Status  : %sPremium%s '%(bm,ra,bm,ra)
 	print ' [%s-%s] Ip User : %s'%(bm,ra,ip)
 	print ' [%s-%s] Id User : %s\n'%(bm,ra,id)
 	print ' [%s1%s] Start Crack '%(hj,ra)
