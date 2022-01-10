@@ -167,7 +167,7 @@ def menu():
 		print(' [!] Check Your Internet Vonnection ')
 	print(raka_logo)
 	print ' [%s-%s] Nama    : %s'%(bm,ra,nama)
-        print ' [%s-%s] Status  : Aktif '%(bm,ra)
+        print ' [%s-%s] Status  : %sAktif%s '%(bm,ra,bm,ra)
 	print ' [%s-%s] Ip User : %s'%(bm,ra,ip)
 	print ' [%s-%s] Id User : %s\n'%(bm,ra,id)
 	print ' [%s1%s] Start Crack '%(hj,ra)
