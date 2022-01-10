@@ -173,7 +173,7 @@ def menu():
 	print ' [%s1%s] Start Crack '%(hj,ra)
 	print ' [%s2%s] Delete Token '%(ku,ra)
 	print ' [%s0%s] Logout\n '%(m,ra)
-	asw = raw_input(' [?] Choose : ')
+	asw = raw_input(' [?] Choose : \x1b[1;96m')
 	if asw =='1' or asw =='01':
 		crack()
 	elif asw =='2' or asw =='02':
@@ -199,7 +199,7 @@ def crack():
 	except IOError:
 		print' [!] Token Exfired '
 		tokenz()
-	ra_id = raw_input("[\x1b[1;97m-\x1b[0m] ID Public : ")
+	ra_id = raw_input("[\x1b[1;97m-\x1b[0m] ID Public : \x1b[1;96m")
 	try:
 		pok = requests.get("https://graph.facebook.com/"+ra_id+"?access_token="+token)
 		sp = json.loads(pok.text)
@@ -211,7 +211,7 @@ def crack():
 		rax_x = i['id']
 		name = i['name']
 		id.append(rax_x+'<=>'+name)
-	print("[\x1b[1;97m-\x1b[0m] Total ID  : "+str(len(id)))
+	print("[\x1b[1;97m-\x1b[0m] Total ID  : \x1b[1;96m"+str(len(id)))
 	print(garis)
 	print("\x1b[1;97mClick \x1b[1;96mCTRL+Z \x1b[1;97mUntuk Berhenti ...\x1b[1;97m")
         print("\x1b[1;97mNote : \x1b[1;96mJika Tak Ada Hasil Mainkan Mode Pesawat 1 Detik \x1b[1;97m?")
