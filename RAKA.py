@@ -211,8 +211,8 @@ def crack():
 		rax_x = i['id']
 		name = i['name']
 		id.append(rax_x+'<=>'+name)
-	print("[\x1b[1;97m-\x1b[0m] Total ID  : \x1b[1;96m"+str(len(id)))
-	print(garis)
+	print("\x1b[1;97m[-] Total ID  : \x1b[1;96m"+str(len(id)))
+	print(\x1b[1;97mgaris)
 	print("\x1b[1;97mClick \x1b[1;96mCTRL+Z \x1b[1;97mUntuk Berhenti ...\x1b[1;97m")
         print("\x1b[1;97mNote : \x1b[1;96mJika Tak Ada Hasil Mainkan Mode Pesawat 1 Detik \x1b[1;97m?")
 	print(garis)
