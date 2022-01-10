@@ -221,7 +221,7 @@ def crack():
 		global loop, token
 		ra_pw = []
 		sys.stdout.write(
-		      '\r [%sR] Crack %s - %s \x1b[1;96mMohon Ditunggu... \x1b[1;97m\n! ' % (ra,loop, len(id))
+		      '\r [%sR] Crack %s - %s \x1b[1;96mMohon Ditunggu... \x1b[1;97m! ' \n% (ra,loop, len(id))
 		); sys.stdout.flush()
 		try:os.mkdir("results")
 		except OSError:pass
