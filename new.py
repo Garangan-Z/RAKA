@@ -120,7 +120,7 @@ def login():
         print " [?] Type '\x1b[0;93mhelp\x1b[0;97m' to see how to get a Facebook token"
         token = raw_input('\n [+] fb token : ')
         if token == '':
-            exit("\n [!] don't be empty")
+            print("\n [!] don't be empty")
         else:
             if token == 'help':
                 os.system('xdg-open https://www.facebook.com/Mr.Jadugar1')
