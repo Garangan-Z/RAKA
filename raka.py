@@ -231,7 +231,7 @@ def menu():
       os.remove("login.txt")
       exit(basecookie())
     except Exception as e:
-    print ("   [•] Wrong Input").format(R,N);menu()
+      print ("   [•] Wrong Input").format(R,N);menu()
 def publik():
 	try:
 		toket=open('login.txt','r').read()
