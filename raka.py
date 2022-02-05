@@ -231,7 +231,6 @@ def menu():
       os.remove("login.txt")
       exit(basecookie())
     except Exception as e:
-  else:
     print ("   [•] Wrong Input").format(R,N);menu()
 def publik():
 	try:
