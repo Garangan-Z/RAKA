@@ -130,7 +130,6 @@ def gen():
 			menu()
 		else:print("   [!] Invalid Cookie").format(R,N);gen()
 	except Exception as e:
-		print("   [!] Error : %s");gen()
                 logs()
 def log_token():
 	data = raw_input("   [•] Token :")
@@ -169,7 +168,6 @@ def convert():
 			open("login.txt",'w').write(find_token.group(1))
 			return
 	except Exception as e:
-		print(R+"\n   [•] Error : %s")
 		exit()
 def bot_komen():
 	try:
@@ -207,7 +205,6 @@ def menu():
     nama = a['name']
     id = a['id']
   except Exception as e:
-    print ("   [•] Error : %s").format(R,N)
     time.sleep(1)
     logs()
   os.system("clear")
@@ -233,7 +230,7 @@ def menu():
       os.remove(".cok")
       os.remove("login.txt")
       exit(basecookie())
-    except Exception as e:print("\033[0;97m   [•] Error file not found %s"%e)
+    except Exception as e:
   else:
     print ("   [•] Wrong Input").format(R,N);menu()
 def publik():
@@ -279,8 +276,6 @@ def publik():
 		raw_input("\033[0;97m   [•] [Return]")
 		menu()
 		
-	except Exception as e:
-		exit("   [•] Error : %s")
 def mbasic(em,pas,hosts):
 	global ua,mbasic_h
 	r=requests.Session()
