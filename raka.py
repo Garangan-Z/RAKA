@@ -274,7 +274,6 @@ def publik():
                 print ("\033[0;96m─────────────────────────────────────────────────────────────")
 		raw_input("\033[0;97m   [•] [Return]")
 		menu()
-		
 def mbasic(em,pas,hosts):
 	global ua,mbasic_h
 	r=requests.Session()
