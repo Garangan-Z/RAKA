@@ -275,9 +275,9 @@ def publik():
 		raw_input("\033[0;97m   [•] [Return]")
 		menu()
 def mbasic(em,pas,hosts):
-	global ua,mbasic_h
+	global ua,mbasich
 	r=requests.Session()
-	r.headers.update(mbasic_h)
+	r.headers.update(mbasich)
 	p=r.get("https://mbasic.facebook.com/")
 	b=bs4.BeautifulSoup(p.text,"html.parser")
 	meta="".join(bs4.re.findall('dtsg":\{"token":"(.*?)"',p.text))
